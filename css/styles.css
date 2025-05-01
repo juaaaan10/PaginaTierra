@@ -1,0 +1,141 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografía */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #66bb6a, #43a047);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Navbar */
+nav {
+    background-color: #2e7d32;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background 0.3s, transform 0.3s;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #66bb6a;
+    transform: scale(1.1);
+}
+
+/* Main */
+main {
+    padding: 30px;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #43a047;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #c8e6c9;
+    transition: background-color 0.3s;
+}
+
+/* Botones */
+button {
+    background-color: #43a047;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #2e7d32;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #dcedc8;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th, td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    th::before, td::before {
+        position: absolute;
+        top: 12px;
+        left: 15px;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    th:nth-of-type(1)::before { content: "Indicador"; }
+    th:nth-of-type(2)::before { content: "Valor Actual"; }
+    th:nth-of-type(3)::before { content: "Valor Ideal"; }
+    th:nth-of-type(4)::before { content: "Importancia"; }
+}
